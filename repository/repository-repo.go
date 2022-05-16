@@ -113,7 +113,7 @@ func Update(referrer_id string, device_id string) {
 
 	var record entity.Device
 	docSnap.DataTo(&record)
-	record.ReferredIDS = append(record.ReferredIDS, device_id)
+	record.RefereeIDs = append(record.RefereeIDs, device_id)
 	_, err = doc.Set(ctx, record)
 	if err != nil {
 		log.Fatalf("Failed to set data: %v", err)
@@ -166,7 +166,7 @@ func CountReferredIDS(device_id string) int {
 
 		var record entity.Device
 		doc.DataTo(&record)
-		return len(record.ReferredIDS)
+		return len(record.RefereeIDs)
 	}
 	return 0
 }

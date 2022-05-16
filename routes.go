@@ -134,7 +134,7 @@ func getReferralCounts(c *gin.Context) {
 	}
 
 	c.JSON(200, gin.H{
-		"message":         "Successfully fetched referral counts",
-		"Referred Counts": len(record.ReferredIDS),
+		"message":        "Successfully fetched referral counts",
+		"Referee Counts": len(record.RefereeIDs),
 	})
 }
