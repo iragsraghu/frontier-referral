@@ -14,11 +14,6 @@ var (
 	repo repository.DeviceRepository = repository.NewRepository()
 )
 
-const (
-	projectID      = "gofrontierreferrals"
-	collectionName = "device_info"
-)
-
 // homePage is a handler function for the GET / route
 func homePage(c *gin.Context) {
 	c.JSON(200, gin.H{
