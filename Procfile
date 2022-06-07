@@ -1,1 +1,1 @@
-web: frontier-referral
+web: bin/frontier-referral
