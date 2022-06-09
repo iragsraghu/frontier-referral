@@ -12,6 +12,5 @@ func main() {
 	router.POST("/api/v1/referrals", createDevice)
 	router.GET("/api/v1/referral", getDevice)
 	router.GET("/api/v1/referral/counts", getReferralCounts)
-
-	router.Run()
+	router.Run() // listen and serve on
 }
